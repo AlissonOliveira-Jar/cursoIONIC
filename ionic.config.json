@@ -1,0 +1,7 @@
+{
+  "name": "automato",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
