@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color = "primary">
+    <ion-menu-button slot = "start"></ion-menu-button>
+    <ion-title>Ilustres da Computação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor = "let p of personas">
+    <ion-item>{{p.nome}}
+      <ion-avatar slot = "start">
+        <ion-img [src] = "p.url"></ion-img>
+      </ion-avatar>
+      <ion-badge color = "warning" slot = "end">{{p.estrelas}}</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>

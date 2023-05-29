@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color = "primary">
+    <ion-menu-button slot = "start"></ion-menu-button>
+    <ion-title>Segment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange) = "alterar($event)">
+    <ion-segment-button value = "celular">
+      <ion-icon name ="call"></ion-icon>
+      <ion-label>Celular</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value = "jogo">
+      <ion-icon name ="game-controller"></ion-icon>
+      <ion-label>Jogo</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list *ngIf="escolha== 'celular'">
+    <ion-item>Apple</ion-item>
+    <ion-item>Microsoft</ion-item>
+    <ion-item>Samsung</ion-item>
+    <ion-item>Huaweii</ion-item>
+  </ion-list>
+  <ion-list *ngIf="escolha== 'jogo'">
+    <ion-item>Blizzard</ion-item>
+    <ion-item>Sony</ion-item>
+    <ion-item>Rockstar</ion-item>
+    <ion-item>EA</ion-item>
+  </ion-list>
+</ion-content>
